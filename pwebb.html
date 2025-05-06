@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Test Pemrograman Web</title>
+    <style>
+        .container {
+            display: flex;
+        }
+       
+        .main {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="main">
+            <main>
+                
+                <h2>Form Pendaftaran Siswa Baru</h2>
+                <form>
+                    <label>Nama:
+                        <input type="text" name="nama">
+                    </label>
+                    <label>Alamat:
+                        <input type="text" name="alamat">
+                    </label>
+                    <label>Telp:
+                        <input type="text" name="telp">
+                    </label>
+                    <label>Jenis Kelamin:</label>
+                    <label><input type="radio" name="gender" value="L"> Laki-laki</label>
+                    <label><input type="radio" name="gender" value="P"> Perempuan</label>
+                    <label>Agama:
+                        <input type="text" name="agama">
+                    </label>
+                    <label>Prestasi yang pernah diraih:</label>
+                    <textarea name="prestasi" rows="4" cols="50"></textarea><br>
+                    <button type="submit">Simpan</button>
+                    <button type="reset">Batal</button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
