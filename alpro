@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int jumlah,pilihan,total=0;
+	char lagi;
+	int harga;
+	int jarak;
+	
+	
+	cout<<"masukan jarak rumah pelanggan (KM):";
+	cin>>lagi;
+		int ongkir = (jarak < 3) ? 15000:25000;
+	int potongan_ongkir = 0;
+	int	diskon = 0;
+	
+	if(total>150000){
+		potongan_ongkir=8000;
+		diskon=35;
+	}
+		if(total>50000){
+		potongan_ongkir=5000;
+		diskon=15;
+	}
+		if(total>25000){
+		potongan_ongkir=3000;
+	}
+	
+	int total_diskon=total*diskon/100;
+	int ongkir_akhir =ongkir-potongan_ongkir;
+	int total_bayar=total-total_diskon+ongkir_akhir;
+	cout << "===== MENU RUMAH MAKAN =====\n";
+    cout << "1. Ayam Geprek  : Rp21000\n";
+    cout << "2. Ayam Goreng  : Rp17000\n";
+    cout << "3. Udang Goreng : Rp19000\n";
+    cout << "4. Cumi Goreng  : Rp20000\n";
+    cout << "5. Ayam Bakar   : Rp25000\n";
+    cout << "============================\n";
+    
+    do{
+    	cout<<"\n pilih menu (1-5) :";
+    	cin>>pilihan;
+    	
+    	
+    		switch(pilihan){
+    			case 1:harga =21000;break;
+    			case 2:harga =17000;break;
+    			case 3:harga =19000;break;
+    			case 4:harga =20000;break;
+    			case 5:harga =25000;break;
+    			default:
+    				cout<<"pilihan tidak tersedia :\n";
+    				continue;
+    				
+			}
+			total +=harga*jumlah;
+			cout<<"ingin memesan menu lain nya (y/n) :\n";
+			cin>>lagi;
+	}while (lagi=='y' || lagi=='Y');
+
+	
+	
+	
+	cout << "\n========== SLIP PEMBAYARAN ==========\n";
+    cout << "Total harga makanan : Rp"<<total<<endl;
+    cout << "Diskon              : Rp"<<diskon<<endl;
+    cout << "Ongkos kirim        : Rp"<<ongkir<<endl;
+    cout << "Potongan ongkir     : Rp"<<potongan_ongkir<<endl;
+    cout << "Ongkir setelah potongan : Rp"<<ongkir_akhir<<endl;
+    cout << "-------------------------------------\n";
+    cout << "TOTAL YANG HARUS DIBAYAR: Rp"<<total_bayar<<endl;
+    cout << "=====================================\n";
+}
